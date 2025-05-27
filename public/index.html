@@ -1,1 +1,45 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>مهامي - طارق</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>مهامي لليوم والغد</h1>
 
+    <form id="task-form">
+      <input type="text" id="task-title" placeholder="عنوان المهمة" required />
+      <textarea id="task-desc" placeholder="وصف (اختياري)"></textarea>
+      <select id="task-category"></select>
+      <button type="submit">إضافة المهمة</button>
+    </form>
+
+    <div id="category-controls">
+      <button id="add-category">➕ تصنيف جديد</button>
+      <button id="edit-categories">⚙️ إدارة التصنيفات</button>
+    </div>
+
+    <div id="tasks-container"></div>
+
+    <div class="report-controls">
+      <button id="generate-report">📄 إنشاء تقرير</button>
+    </div>
+  </div>
+
+  <!-- نافذة منبثقة للتصنيفات -->
+  <div id="category-modal" class="modal hidden">
+    <div class="modal-content">
+      <h3>إدارة التصنيفات</h3>
+      <ul id="category-list"></ul>
+      <input type="text" id="new-category-name" placeholder="اسم تصنيف جديد" />
+      <button id="save-category">حفظ</button>
+      <button id="close-category-modal">إغلاق</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
