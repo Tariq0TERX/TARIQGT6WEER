@@ -1,0 +1,80 @@
+/* style.css - تصميم واجهة موقع TSM */
+
+body {
+  margin: 0;
+  font-family: 'Cairo', sans-serif;
+  background-color: #121212;
+  color: #f0f0f0;
+}
+
+header, footer {
+  background-color: #1e1e1e;
+  padding: 1rem;
+  text-align: center;
+  font-size: 1.5rem;
+}
+
+main {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  padding: 1rem;
+}
+
+#task-form, #category-manager {
+  background-color: #1a1a1a;
+  padding: 1rem;
+  border-radius: 10px;
+  flex: 1;
+  min-width: 280px;
+}
+
+#tasks-container {
+  flex: 2;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+input, textarea, select, button {
+  width: 100%;
+  margin-top: 0.5rem;
+  margin-bottom: 1rem;
+  padding: 0.7rem;
+  border-radius: 8px;
+  border: none;
+  font-size: 1rem;
+}
+
+button {
+  background-color: #00bcd4;
+  color: #fff;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+button:hover {
+  background-color: #0097a7;
+}
+
+.task-card {
+  background-color: #1f1f1f;
+  border-left: 5px solid #00bcd4;
+  padding: 1rem;
+  border-radius: 8px;
+  width: 100%;
+  max-width: 400px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+}
+
+.task-completed {
+  border-left-color: #4caf50;
+  opacity: 0.8;
+  text-decoration: line-through;
+}
+
+@media (max-width: 768px) {
+  main {
+    flex-direction: column;
+  }
+}
